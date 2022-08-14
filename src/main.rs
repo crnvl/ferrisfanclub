@@ -1,17 +1,12 @@
-use std::io;
-
 fn main() {
-    let mut input_str: String = String::new();
-    io::stdin().read_line(&mut input_str).unwrap();
-    let input: usize = input_str.trim().parse().unwrap();
-
-    let mut array: Vec<usize> = vec![0; input];
-
-    for i in 0..array.len() {
-        let mut number: String = String::new();
-        io::stdin().read_line(&mut number).unwrap();
-        array[i] = number.trim().parse::<usize>().unwrap();
-    }
-
-    println!("{:?}", array);
+    let arr = [1, 2, 3, 4, 5];
+    print_arr_range(&arr, 0, 3);
 }
+
+fn print_arr_range(arr: &[i32], start: i32, end: i32) {
+    for i in start..end {
+        println!("{}", arr[i as usize]);
+    }
+}
+
+
