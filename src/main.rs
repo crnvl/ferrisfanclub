@@ -3,8 +3,8 @@ fn main() {
     print_arr_range(&arr, 0, 3);
 }
 
-fn print_arr_range(arr: &[i32], start: i32, end: i32) {
+fn print_arr_range(arr: &[i32], start: usize, end: usize) {
     for i in start..end {
-        println!("{}", arr[i as usize]);
+        println!("{}", arr[i]);
     }
 }
