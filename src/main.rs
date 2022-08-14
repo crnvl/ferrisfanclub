@@ -8,5 +8,3 @@ fn print_arr_range(arr: &[i32], start: i32, end: i32) {
         println!("{}", arr[i as usize]);
     }
 }
-
-
