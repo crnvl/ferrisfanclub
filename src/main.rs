@@ -1,18 +1,11 @@
-/* 
-    create a program that rolls a dice 10 times and checks if the sum is even
-*/
-
-use rand::{Rng}; // 0.8.0
+// write a program that rolls a dice ten times.
 
 fn main() {
-    let mut sum = 0;
-    for i in 0..10 {
-        let dice = rand::thread_rng().gen_range(1..7);
-        sum += dice;
+    let mut roll_count = 0;
+    let mut roll_total = 0;
+    while roll_count < 10 {
+        roll_total += rand::thread_rng().gen_range(1, 7);
+        roll_count += 1;
     }
-    if sum % 2 == 0 {
-        println!("The sum is even");
-    } else {
-        println!("The sum is odd");
-    }
+    println!("Total: {}", roll_total);
 }
