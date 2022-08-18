@@ -1,20 +1,20 @@
 // write a program that rolls a dice ten times.
 
 fn main() {
-    const A: [i32; 6] = [1, 2, 3, 4, 5, 6];
-    const B: [i32; 6] = [10, 20, 30, 40, 50, 60];
+    let a:  Vec<i32> = vec![1, 2, 3, 4, 5, 6];
+    let b:  Vec<i32> = vec![10, 20, 30, 40, 50, 60];
 
-    let c: [i32; A.len() + B.len()] = merge(&A, &B);
+    let c:  Vec<i32> = merge(a, b);
     println!("{:?}", c);
 }
 
-fn merge(a: &[i32; 6], b: &[i32; 6]) -> [i32; 12] {
-    let mut c: [i32; 12] = [0; 12];
+fn merge(a: Vec<i32>, b: Vec<i32>) -> Vec<i32> {
+    let mut c: Vec<i32> = vec![0; a.len() + b.len()]; 
 
     let mut index_a = 0;
     let mut index_b = 0;
 
-    for i in 0..12 {
+    for i in 0..c.len() {
         if index_a < a.len() && (index_b == b.len() || a[index_a] < b[index_b]) {
             c[i] = a[index_a];
             index_a += 1;
