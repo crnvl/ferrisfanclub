@@ -1,8 +1,8 @@
 use rand::{thread_rng, Rng};
 
 fn main() {
-    let mut a: Vec<i32> = vec![0; 20];
-    let mut b: Vec<i32> = vec![0; 12];
+    let mut a: Vec<i32> = vec![0; 2000000];
+    let mut b: Vec<i32> = vec![0; 2000000];
 
     for i in 0..a.len() {
         a[i] = thread_rng().gen_range(0..100);
