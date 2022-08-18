@@ -1,5 +1,3 @@
-// write a program that rolls a dice ten times.
-
 fn main() {
     let a:  Vec<i32> = vec![1, 2, 3, 4, 5, 6];
     let b:  Vec<i32> = vec![10, 20, 30, 40, 50, 60];
